@@ -1,9 +1,25 @@
+
 body {
-	
+	margin:0 auto;
+
 }
-h1 {
+div {
+	width:600px;
+	height: 300px;
+	margin:0 auto;
+}
+
+header {
 	text-align: center;
 	font-family: 'Julius Sans One', sans-serif;
-	font-size: 40px;
+	font-size: 30px;
+	padding: 0px 20px 0px 00px;
 	letter-spacing: 15px;
+	border-bottom: 1px solid black;
 	}
+
+img {
+	width: 100px;
+	float:left;
+	margin:0 50px;
+}
