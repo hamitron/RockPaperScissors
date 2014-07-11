@@ -22,51 +22,43 @@ function compuChoice(choice) {
   computerChoice = Math.floor(Math.random() * choices.length);
   document.getElementsByClassName("shape-choice")[computerChoice].style.backgroundColor = "rgba(255,0,187,0.5)";
 
-	if (computerChoice == outcomeUser || outcomeUser == computerChoice ) {
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>TiE!!!</p>" ;
-	} else if (outcomeUser == 0 && computerChoice == 1){
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>" ;
-	} else if (outcomeUser == 0 && computerChoice == 2){
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
-	} else if (outcomeUser == 1 && computerChoice == 0){
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
-	} else if (outcomeUser == 1 && computerChoice == 2){
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
-	} else if (outcomeUser == 2 && computerChoice == 0){
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
-	} else if (outcomeUser == 2 && computerChoice == 1){
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
-	}
-	else {
-		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Nothing</p>";
-}
-};
-
-
-
-
-
-
-
-
-
-// function rpsOutcome(outcomeUser, computerChoice) {
-// if (computerChoice == outcomeUser) {
-// 	document.getElementsByClassName("whoWins")[0].innerHTML = "<p>It is a Tie!</p>";
-// } else if (computerChoice === 0 && outcomeUser === 1) {
-// 	document.getElementsByClassName("shape-choice")[outcome2].style.backgroundColor = "rgba(255,255,255,1);";
-// } else {
+// 	if (computerChoice == outcomeUser || outcomeUser == computerChoice ) {
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Tie!!!</p>" ;
+// 	} else if (outcomeUser == 0 && computerChoice == 1){
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>" ;
+// 	} else if (outcomeUser == 0 && computerChoice == 2){
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
+// 	} else if (outcomeUser == 1 && computerChoice == 0){
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
+// 	} else if (outcomeUser == 1 && computerChoice == 2){
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
+// 	} else if (outcomeUser == 2 && computerChoice == 0){
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
+// 	} else if (outcomeUser == 2 && computerChoice == 1){
+// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
+// 	}
+// 	else {
 // 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Nothing</p>";
 // }
 // };
 
+	if ((computerChoice == outcomeUser) || (outcomeUser == computerChoice)){
+		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Tie!!!<p/>";
+	} else if (
+		(outcomeUser == 0 && computerChoice == 1 ) ||
+		(outcomeUser == 1 && computerChoice == 2 ) ||
+		(outcomeUser == 2 && computerChoice == 0 )) {
+			document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
+	} else if (
+		(outcomeUser == 0 && computerChoice == 2 ) ||
+		(outcomeUser == 1 && computerChoice == 0 ) ||
+		(outcomeUser == 2 && computerChoice == 1 )) {
+			document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
+	} else {
+		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>How did we get here?</p>";
+	}
+}
 
 
-
-
-
-// function mouseOverColor2() {
-// 	document.getElementById(this).style.backgroundColor = "rgba(191,255,255,0.8)";
-// };
 
 
