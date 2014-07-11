@@ -19,28 +19,8 @@ function mouseOverColor2() {
 };
 
 function compuChoice(choice) {
-  computerChoice = Math.floor(Math.random() * choices.length);
-  document.getElementsByClassName("shape-choice")[computerChoice].style.backgroundColor = "rgba(255,0,187,0.5)";
-
-// 	if (computerChoice == outcomeUser || outcomeUser == computerChoice ) {
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Tie!!!</p>" ;
-// 	} else if (outcomeUser == 0 && computerChoice == 1){
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>" ;
-// 	} else if (outcomeUser == 0 && computerChoice == 2){
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
-// 	} else if (outcomeUser == 1 && computerChoice == 0){
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
-// 	} else if (outcomeUser == 1 && computerChoice == 2){
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
-// 	} else if (outcomeUser == 2 && computerChoice == 0){
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Computer Wins!</p>";
-// 	} else if (outcomeUser == 2 && computerChoice == 1){
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>You Win!</p>";
-// 	}
-// 	else {
-// 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Nothing</p>";
-// }
-// };
+	computerChoice = Math.floor(Math.random() * choices.length);
+	document.getElementsByClassName("shape-choice")[computerChoice].style.backgroundColor = "rgba(255,0,187,0.5)";
 
 	if ((computerChoice == outcomeUser) || (outcomeUser == computerChoice)){
 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Tie!!!<p/>";
@@ -57,8 +37,14 @@ function compuChoice(choice) {
 	} else {
 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>How did we get here?</p>";
 	}
+
 }
 
 
+function playAgain () {
+	document.getElementsByClassName("whoWins")[0].innerHTML= "<p>Who wins?</p>";
+	for (i = 0; i < 3; i++) { document.getElementsByClassName("shape-choice")[i].style.backgroundColor = "white";};
+	
 
 
+}
