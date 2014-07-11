@@ -20,6 +20,10 @@ header {
 	margin:0 auto;
 	
 }
+.whoWins {
+	text-align: center;
+	font-size: 30px;
+}
 .shape-choice {
 	width: 100px;
 	height: 150px;
