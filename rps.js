@@ -61,6 +61,6 @@ function compuChoice(choice) {
 function playAgain () {
 	document.getElementsByClassName("whoWins")[0].innerHTML= "<p>Who wins?</p>";
 	gamePlayed = false;
-	for (i = 0; i < 3; i++) { document.getElementsByClassName("shape-choice")[i].style.backgroundColor = "white";};
+	for (i = 0; i <= 2; i++) { document.getElementsByClassName("shape-choice")[i].style.backgroundColor = "white";};
 		
 }
