@@ -56,3 +56,24 @@ header {
 #scissors:hover {
 	background-color: rgba(191,255,255,0.6);
 }
+
+@media (max-width: 600px) {
+	header {
+		font-size:15px;
+		padding 0px;
+	}
+	.shape-container {
+		width: 100%
+		height:auto;
+	}
+	.shape-choice {
+		padding: 5px;
+		width: 200px;
+		height: 250px;
+		float: left;
+		clear: both;
+  }
+  	.playText {
+  		font-size: 30px;
+  	}
+}
