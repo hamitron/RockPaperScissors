@@ -27,7 +27,7 @@ function mouseOverColor1() {
 };
 function mouseOverColor2() {
 	gameChecker();
-	document.getElementsByClassName("shape-choice")[2].style.backgroundColor = "rgba(20,2204,204,0.5)";
+	document.getElementsByClassName("shape-choice")[2].style.backgroundColor = "rgba(20,204,204,0.5)";
 	outcomeUser = 2;
 	compuChoice(outcomeUser);
 };
@@ -38,6 +38,7 @@ function compuChoice(choice) {
 
 	if ((computerChoice == outcomeUser) || (outcomeUser == computerChoice)){
 		document.getElementsByClassName("whoWins")[0].innerHTML = "<p>Tie!!!<p/>";
+		gamePlayed = true;
 	} else if (
 		(outcomeUser == 0 && computerChoice == 1 ) ||
 		(outcomeUser == 1 && computerChoice == 2 ) ||
